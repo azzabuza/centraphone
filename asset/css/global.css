@@ -1841,7 +1841,7 @@ svg .line {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  border-bottom: 1px solid #f5f5f5;
+  border-top: 1px solid #f5f5f5;
 }
 .mobile-flex {
   box-sizing: border-box;
