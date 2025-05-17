@@ -54,7 +54,7 @@
   .footer-flex {
     width: 33.3%;
   }
-  .search, .slide, .brand, .product, .shopping, .cart, .article {
+  .search, .slide, .brand, .product, .shopping, .cart, .article, .error404 {
     border-bottom: 1px solid #f5f5f5;
   }
 }
