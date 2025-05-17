@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- META TITLE -->
+    <title id="metaTitle">Shopping - Centraphone</title>
+    <meta property="og:title" id="ogTitle" content="Shopping - Centraphone" />
+    <meta name="twitter:title" id="twitterTitle" content="Shopping - Centraphone" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- META DESCRIPTION -->
+    <meta
+      name="description"
+      id="metaDescription"
+      content="Open the page link to see the best products at Centraphone"
+    />
+    <meta
+      property="og:description"
+      id="ogDescription"
+      content="Open the page link to see the best products at Centraphone"
+    />
+    <meta
+      name="twitter:description"
+      id="twitterDescription"
+      content="Open the page link to see the best products at Centraphone"
+    />
+    <!-- META IMAGE -->
+    <meta
+      property="image"
+      id="metaImage"
+      content="https://centraphone.vercel.app/asset/image/app.webp"
+    />
+    <meta
+      property="og:image"
+      id="ogImage"
+      content="https://centraphone.vercel.app/asset/image/app.webp"
+    />
+    <meta
+      name="twitter:image"
+      id="twitterImage"
+      content="https://centraphone.vercel.app/asset/image/app.webp"
+    />
+    <!-- META INDEX -->
+    <meta name="robots" content="index,follow" />
+    <!-- FACEBOOK -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://centraphone.vercel.app" />
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@centraphone" />
+    <!-- MOBILE -->
+    <meta content="yes" name="mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="Centraphone" name="apple-mobile-web-app-title" />
+    <meta content="Centraphone" name="application-name" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="Centraphone" name="apple-mobile-web-app-status-bar-style" />
+    <link rel="icon" type="images/x-icon" href="../asset/image/logo.png" />
+    <meta name="theme-color" content="#24323d" />
+    <!-- PLUGIN -->
+    <link href="../asset/css/global.css" rel="stylesheet" />
+    <link href="../asset/css/responsive.css" rel="stylesheet" />
+    <script>
+      // CANONICAL GENERATOR
+      const params = new URLSearchParams(window.location.search);
+      const product = params.get("product");
+
+      if (product) {
+        const link = document.createElement("link");
+        link.rel = "canonical";
+
+        link.href = `https://centraphone.vercel.app/page/shopping.html?product=${product}`;
+        document.head.appendChild(link);
+      }
+    </script>
+  </head>
+  <body>
+    <main
+      class="content-wrapper"
+      itemscope
+      itemtype="https://schema.org/WebPage"
+    >
+      <section class="header" id="header"></section>
+      <section class="shopping">
+        <h2 id="title-shope">Product Detail</h2>
+        <div class="shopping-box" id="shopping-container"></div>
+      </section>
+      <section class="product" itemscope itemtype="https://schema.org/ItemList">
+        <h2>Related Product</h2>
+        <div class="product-box" id="product-related"></div>
+      </section>
+      <section class="footer" id="footer"></section>
+      <section class="order" id="order">
+  <div class="order-box">
+    <div class="order-btn-box">
+      <div
+        class="order-flex">
+        <a class="order-content"
+        href="#"
+        onclick="window.history.back(); return false;"
+        title="Back"
+      >
+          <svg
+            class="line"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="none"
+            stroke="currentColor"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M9 14l-4 -4l4 -4"></path>
+            <path d="M5 10h11a4 4 0 1 1 0 8h-1"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="order-flex">
+        <a class="order-content" href="#" title="Chat">
+          <svg
+            class="line"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="none"
+            stroke="currentColor"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M21 10.663c0 -4.224 -4.041 -7.663 -9 -7.663s-9 3.439 -9 7.663c0 3.783 3.201 6.958 7.527 7.56c1.053 .239 .932 .644 .696 2.133c-.039 .238 -.184 .932 .777 .512c.96 -.42 5.18 -3.201 7.073 -5.48c1.304 -1.504 1.927 -3.029 1.927 -4.715v-.01z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="order-cart">
+      <button id="add-to-cart2">Add to Cart</button>
+    </div>
+  </div>
+</section>
+    </main>
+    <script type="text/javascript" src="../config/shopping.js"></script>
+    <script type="text/javascript" src="../config/related.js"></script>
+    <script type="text/javascript" src="../asset/js/global.js"></script>
+  </body>
+</html>

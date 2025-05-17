@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://centraphone.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://centraphone.vercel.app; font-src 'self' https://fonts.gstatic.com; object-src 'none';"
+    />
+    <title>Shopping Cart</title>
+    <meta property="image" content="https://centraphone.vercel.app/asset/image/app.webp" />
+    <meta
+      name="description"
+      content="Manage orders, check prices, and make payments easily for a fun and safe shopping experience at centraphone.vercel.app."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://centraphone.vercel.app/page/search.html" />
+    <!-- FACEBOOK -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Shopping Cart" />
+    <meta
+      property="og:image"
+      content="https://centraphone.vercel.app/asset/image/app.webp"
+    />
+    <meta
+      property="og:description"
+      content="Manage orders, check prices, and make payments easily for a fun and safe shopping experience at centraphone.vercel.app."
+    />
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shopping Cart" />
+    <meta
+      name="twitter:image"
+      content="https://centraphone.vercel.app/asset/image/app.webp"
+    />
+    <meta
+      name="twitter:description"
+      content="Manage orders, check prices, and make payments easily for a fun and safe shopping experience at centraphone.vercel.app."
+    />
+    <!-- Mobile -->
+    <meta content="yes" name="mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="Centraphone" name="apple-mobile-web-app-title" />
+    <meta content="Centraphone" name="application-name" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="Centraphone" name="apple-mobile-web-app-status-bar-style" />
+    <link rel="icon" type="images/x-icon" href="../asset/image/logo.png" />
+    <meta name="theme-color" content="#24323d" />
+    <!-- PLUGIN -->
+    <link href="../asset/css/global.css" rel="stylesheet" />
+    <link href="../asset/css/responsive.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main
+      class="content-wrapper"
+      itemscope
+      itemtype="https://schema.org/WebPage"
+    >
+      <section class="header" id="header"></section>
+      <section class="cart">
+        <h2>Shopping Cart</h2>
+        <div class="cart-box">
+          <div class="cart-left">
+            <div class="cart-content">
+              <div id="cart-items"></div>
+            </div>
+          </div>
+          <div class="cart-right">
+            <div class="cart-summary">
+              <h3>Sub total: <span id="cart-subtotal">0</span></h3>
+              <table>
+                <tr><td>Insurance</td> <td id="cart-insurance" style="text-align: right;">0</td></tr>
+                <tr><td>Packaging</td> <td id="cart-packing" style="text-align: right;">0</td></tr>
+                <tr><td>Admin Fee</td> <td id="cart-administration" style="text-align: right;">0</td></tr>
+                <tr><td>Total</td> <td id="cart-total" style="text-align: right;">0</td></tr>
+              </table>
+              <a href="../page/checkout.html" id="cart-button" title="Checkout Now">Checkout Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="product" itemscope itemtype="https://schema.org/ItemList">
+        <h2>Related Product</h2>
+        <div class="product-box" id="product-related"></div>
+      </section>
+      <section class="footer" id="footer"></section>
+      <section class="mobile" id="mobile"></section>
+    </main>
+    <script type="text/javascript" src="../config/related.js"></script>
+    <script type="text/javascript" src="../asset/js/cart.js"></script>
+    <script type="text/javascript" src="../asset/js/global.js"></script>
+  </body>
+</html>

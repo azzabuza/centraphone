@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /api/
+Allow: /public/
+Sitemap: https://www.bibitin.com/sitemap.xml

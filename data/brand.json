@@ -1,0 +1,77 @@
+[
+  {
+    "url": "../page/brand.html?product=apple",
+    "title": "Apple",
+    "image": "../asset/image/icon/apple.jpg"
+  },
+  {
+    "url": "../page/brand.html?product=samsung",
+    "title": "Samsung",
+    "image": "../asset/image/icon/samsung.jpg"
+  },
+  {
+    "url": "../page/brand.html?product=oppo",
+    "title": "Oppo",
+    "image": "../asset/image/icon/oppo.jpg"
+  },
+  {
+    "url": "../page/brand.html?product=xiaomi",
+    "title": "Xiaomi",
+    "image": "../asset/image/icon/xiaomi.jpg"
+  },
+  {
+    "url": "../page/brand.html?product=vivo",
+    "title": "Vivo",
+    "image": "../asset/image/icon/vivo.jpg"
+  },
+  {
+    "url": "../page/brand.html?product=asus",
+    "title": "Asus",
+    "image": "../asset/image/icon/asus.jpg"
+  },
+  {
+    "url": "../page/brand.html?product=huawei",
+    "title": "Huawei",
+    "image": "../asset/image/icon/huawei.jpg"
+  },
+  {
+    "url": "../page/brand.html?product=honor",
+    "title": "Honor",
+    "image": "../asset/image/icon/honor.jpg"
+  },
+  {
+    "url": "../page/brand.html?product=poco",
+    "title": "Poco",
+    "image": "../asset/image/icon/poco.jpg"
+  },
+  {
+    "url": "../page/brand.html?product=iqoo",
+    "title": "Iqoo",
+    "image": "../asset/image/icon/iqoo.jpg"
+  },
+  {
+    "url": "../page/brand.html?product=realme",
+    "title": "Realme",
+    "image": "../asset/image/icon/realme.jpg"
+  },
+  {
+    "url": "../page/brand.html?product=infinix",
+    "title": "Infinix",
+    "image": "../asset/image/icon/infinix.jpg"
+  },
+  {
+    "url": "../page/brand.html?product=tecno",
+    "title": "Tecno",
+    "image": "../asset/image/icon/tecno.jpg"
+  },
+  {
+    "url": "../page/brand.html?product=zte",
+    "title": "ZTE",
+    "image": "../asset/image/icon/zte.jpg"
+  },
+  {
+    "url": "../page/brand.html?product=sharp",
+    "title": "Sharp",
+    "image": "../asset/image/icon/sharp.jpg"
+  }
+]

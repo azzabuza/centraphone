@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://centraphone.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://centraphone.vercel.app; font-src 'self' https://fonts.gstatic.com; object-src 'none';"
+    />
+    <title>Search Product</title>
+    <meta property="image" content="https://centraphone.vercel.app/asset/image/app.webp" />
+    <meta
+      name="description"
+      content="Start exploring now and find the right gadget for you."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://centraphone.vercel.app/page/search.html" />
+    <!-- FACEBOOK -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Search Product" />
+    <meta
+      property="og:image"
+      content="https://centraphone.vercel.app/asset/image/app.webp"
+    />
+    <meta
+      property="og:description"
+      content="Start exploring now and find the right gadget for you."
+    />
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Search Product" />
+    <meta
+      name="twitter:image"
+      content="https://centraphone.vercel.app/asset/image/app.webp"
+    />
+    <meta
+      name="twitter:description"
+      content="Start exploring now and find the right gadget for you."
+    />
+    <!-- Mobile -->
+    <meta content="yes" name="mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="Centraphone" name="apple-mobile-web-app-title" />
+    <meta content="Centraphone" name="application-name" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="Centraphone" name="apple-mobile-web-app-status-bar-style" />
+    <link rel="icon" type="images/x-icon" href="../asset/image/logo.png" />
+    <meta name="theme-color" content="#24323d" />
+    <!-- PLUGIN -->
+    <link href="../asset/css/global.css" rel="stylesheet" />
+    <link href="../asset/css/responsive.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main
+      class="content-wrapper"
+      itemscope
+      itemtype="https://schema.org/WebPage"
+    >
+      <section class="header" id="header"></section>
+      <section class="search" itemscope itemtype="https://schema.org/WebPage">
+        <h2 itemprop="headline">Search Product</h2>
+        <div
+          class="search-box"
+          itemprop="potentialAction"
+          itemscope
+          itemtype="https://schema.org/SearchAction"
+        >
+          <div class="searching">
+            <div class="search-engine">
+              <svg
+                class="line"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="none"
+                stroke="currentColor"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                <path d="M21 21l-6 -6" />
+              </svg>
+              <script type="text/javascript">
+                document.addEventListener("DOMContentLoaded", () => {
+                  const urlParams = new URLSearchParams(window.location.search);
+                  const queryParam = urlParams.get("query");
+
+                  if (queryParam) {
+                    const metaTarget = document.querySelector(
+                      'meta[itemprop="target"]'
+                    );
+                    if (metaTarget) {
+                      metaTarget.setAttribute(
+                        "content",
+                        `../page/search.html?query=${queryParam}`
+                      );
+                    }
+                  }
+                });
+              </script>
+              <input
+                type="text"
+                id="search-item"
+                onkeyup="search()"
+                placeholder="Search product or brand..."
+                itemprop="query-input"
+                aria-label="Search Products"
+              />
+            </div>
+          </div>
+          <div class="search-list" id="search-list" itemprop="result"></div>
+          <div class="not-found" style="display: none;">
+            <div class="product-not-found" itemprop="result">
+              Product not available
+            </div>
+            </div>
+        </div>
+      </section>
+      <section class="product" itemscope itemtype="https://schema.org/ItemList">
+        <h2>Related Product</h2>
+        <div class="product-box" id="product-related"></div>
+      </section>
+      <section class="footer" id="footer"></section>
+      <section class="mobile" id="mobile"></section>
+    </main>
+    <script type="text/javascript" src="../config/search.js"></script>
+    <script type="text/javascript" src="../config/related.js"></script>
+    <script type="text/javascript" src="../asset/js/global.js"></script>
+  </body>
+</html>
