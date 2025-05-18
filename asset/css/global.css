@@ -137,7 +137,7 @@ svg .line {
 }
 .logo-info p {
   color: #0a1117;
-  font-size: 10px;
+  font-size: 0.8rem;
   font-weight: 500;
   padding: 0;
   margin: 0;
@@ -373,7 +373,7 @@ svg .line {
   position: relative;
 }
 .search h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #090e11;
   padding: 0;
@@ -498,7 +498,7 @@ svg .line {
   position: absolute;
   background-color: #b22222;
   color: #ffffff;
-  font-size: 10px;
+  font-size: 0.8rem;
   font-weight: 500;
   width: 30px;
   height: 30px;
@@ -537,7 +537,7 @@ svg .line {
   position: relative;
 }
 .slide h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #090e11;
   padding: 0;
@@ -687,7 +687,7 @@ svg .line {
   position: relative;
 }
 .brand h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #090e11;
   padding: 0;
@@ -762,7 +762,7 @@ svg .line {
   text-align: left;
 }
 .product h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #090e11;
   padding: 0;
@@ -796,7 +796,7 @@ svg .line {
   position: absolute;
   background-color: #b22222;
   color: #ffffff;
-  font-size: 10px;
+  font-size: 0.8rem;
   font-weight: 500;
   width: 30px;
   height: 30px;
@@ -913,7 +913,7 @@ svg .line {
   text-align: left;
 }
 .shopping h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #090e11;
   padding: 0;
@@ -1042,7 +1042,7 @@ svg .line {
   position: absolute;
   background-color: #b22222;
   color: #ffffff;
-  font-size: 10px;
+  font-size: 0.8rem;
   font-weight: 500;
   width: 30px;
   height: 30px;
@@ -1251,7 +1251,7 @@ svg .line {
   position: relative;
 }
 .cart h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #090e11;
   padding: 0;
@@ -1504,7 +1504,7 @@ svg .line {
   position: relative;
 }
 .article h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #090e11;
   padding: 0;
@@ -1668,7 +1668,7 @@ svg .line {
   position: absolute;
   background-color: #b22222;
   color: #ffffff;
-  font-size: 10px;
+  font-size: 0.8rem;
   font-weight: 500;
   width: 30px;
   height: 30px;
@@ -1764,7 +1764,7 @@ svg .line {
   position: relative;
 }
 .footer-content h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #090e11;
   padding: 0;
