@@ -753,22 +753,22 @@ svg .line {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/*  */
-. {
+/*  PRODUCT */
+.product {
   box-sizing: border-box;
   position: relative;
   padding: 10px;
   margin: 0;
   text-align: left;
 }
-. h2 {
+.product h2 {
   font-size: 1.3rem;
   font-weight: 600;
   color: #090e11;
   padding: 0;
   margin: 10px;
 }
-.-box {
+.product-box {
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
