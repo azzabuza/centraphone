@@ -305,7 +305,7 @@ svg .line {
 }
 .nav-hero h3 {
   color: #0a1117;
-  font-size: 16px;
+  font-size: 1.1rem;
   font-weight: 600;
   padding: 0;
   margin: 0 0 10px 0;
@@ -753,22 +753,22 @@ svg .line {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* PRODUCT */
-.product {
+/*  */
+. {
   box-sizing: border-box;
   position: relative;
   padding: 10px;
   margin: 0;
   text-align: left;
 }
-.product h2 {
+. h2 {
   font-size: 1.3rem;
   font-weight: 600;
   color: #090e11;
   padding: 0;
   margin: 10px;
 }
-.product-box {
+.-box {
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
@@ -1026,7 +1026,7 @@ svg .line {
 }
 .shopping-title {
   color: #0a1117;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 400;
   padding: 0;
   margin: 0 0 20px 0;
@@ -1055,7 +1055,7 @@ svg .line {
 }
 .shopping-getprice {
   color: #132028;
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 500;
 }
 .shopping-oriprice {
@@ -1124,7 +1124,7 @@ svg .line {
 }
 .shopping-detail h3 {
   color: #0a1117;
-  font-size: 16px;
+  font-size: 1.1rem;
   font-weight: 600;
   padding: 0;
   margin: 0 0 10px 0;
@@ -1169,7 +1169,7 @@ svg .line {
 }
 .shopping-content h3 {
   color: #0a1117;
-  font-size: 16px;
+  font-size: 1.1rem;
   font-weight: 600;
   padding: 0;
   margin: 0 0 10px 0;
@@ -1438,7 +1438,7 @@ svg .line {
 }
 .cart-summary h3 {
   color: #0a1117;
-  font-size: 16px;
+  font-size: 1.1rem;
   font-weight: 600;
   padding: 0;
   margin: 0 0 10px 0;
@@ -1558,7 +1558,7 @@ svg .line {
 }
 .article h3 {
   color: #0a1117;
-  font-size: 16px;
+  font-size: 1.1rem;
   font-weight: 600;
   padding: 0;
   margin: 0 0 10px 0;
@@ -1628,7 +1628,7 @@ svg .line {
 }
 .recommendation-product-content h3 {
   color: #0a1117;
-  font-size: 16px;
+  font-size: 1.1rem;
   font-weight: 600;
   padding: 0;
   margin: 0 0 10px 0;
@@ -2011,7 +2011,7 @@ svg .line {
 }
 .expired-content h3 {
   color: #ffffff;
-  font-size: 16px;
+  font-size: 1.1rem;
   font-weight: 600;
   padding: 0;
   margin: 0 0 10px 0;
