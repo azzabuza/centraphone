@@ -519,7 +519,7 @@ svg .line {
 .search-oriprice {
   text-decoration: line-through;
   color: #666666;
-  font-size: 12px;
+  font-size: 0.8rem;
   font-weight: 400;
   padding: 0;
   margin: 0;
@@ -605,7 +605,7 @@ svg .line {
 }
 .slide-title-content h3 {
   color: #ffffff;
-  font-size: 12px;
+  font-size: 0.8rem;
   font-weight: 400;
   padding: 0;
   margin: 0;
@@ -862,7 +862,7 @@ svg .line {
 .product-oriprice {
   text-decoration: line-through;
   color: #666666;
-  font-size: 12px;
+  font-size: 0.8rem;
   font-weight: 400;
   padding: 0;
   margin: 0;
@@ -1061,7 +1061,7 @@ svg .line {
 .shopping-oriprice {
   text-decoration: line-through;
   color: #666666;
-  font-size: 12px;
+  font-size: 0.8rem;
   font-weight: 400;
   padding: 0;
   margin: 0;
@@ -1349,7 +1349,7 @@ svg .line {
 }
 .cart-total {
   color: #666666;
-  font-size: 12px;
+  font-size: 0.8rem;
   font-weight: 400;
   padding: 0;
   margin: 0 0 10px 0;
@@ -1733,7 +1733,7 @@ svg .line {
 .recommendation-oriprice {
   text-decoration: line-through;
   color: #666666;
-  font-size: 12px;
+  font-size: 0.8rem;
   font-weight: 400;
   padding: 0;
   margin: 0;
