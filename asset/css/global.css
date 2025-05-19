@@ -1991,38 +1991,3 @@ svg .line {
   border-radius: 5px;
   cursor: pointer;
 }
-/* TAKEDOWN */
-.expired {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0 auto;
-  z-index: 4;
-  position: fixed;
-  max-width: 1200px;
-  width: 100%;
-  bottom: 0;
-}
-.expired-content {
-  box-sizing: border-box;
-  background-color: #b22222;
-  padding: 10px;
-  margin: 0;
-  position: relative;
-}
-.expired-content h3 {
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 0;
-  margin: 0 0 10px 0;
-}
-.expired-content p {
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 400;
-  padding: 0;
-  margin: 0;
-}
-#countdown {
-  font-weight: 700;
-}
