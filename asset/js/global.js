@@ -119,32 +119,3 @@ function updateCartCount() {
     cartCountElement.textContent = totalItems;
   }
 }
-
-// POPUP ALERT
-function createPopup() {
-  const lastClosed = localStorage.getItem('popupClosedTime');
-  if (lastClosed) {
-    const oneDayInMs = 24 * 60 * 60 * 1000;
-    const timePassed = Date.now() - parseInt(lastClosed);
-    if (timePassed < oneDayInMs) {
-      return;
-    }
-  }
-  const popupHTML = `
-    <div class="popup-overlay">
-    <div class="popup-alert">
-      <h2>Selamat Datang</h2>
-      <p>Ini adalah proyek web yang saya buat menggunakan html, css, dan js vanilla</p>
-      <button id="closePopup">Tutup, Jangan tampilkan lagi</button>
-    </div>
-    </div>
-  `;
-  document.body.insertAdjacentHTML('beforeend', popupHTML);
-  function closePopup() {
-    document.querySelector('.popup-alert').remove();
-    document.querySelector('.popup-overlay').remove();
-    localStorage.setItem('popupClosedTime', Date.now());
-  }
-  document.getElementById('closePopup').addEventListener('click', closePopup);
-}
-document.addEventListener('DOMContentLoaded', createPopup);
