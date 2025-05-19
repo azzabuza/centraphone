@@ -1095,7 +1095,7 @@ svg .line {
   z-index: 11;
   overflow: hidden;
   border-radius: 50%;
-  border: 1px solid #f5f5f5;
+  border: 1px solid #dcdcdc;
 }
 
 .fly-animation img {
