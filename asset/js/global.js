@@ -126,34 +126,30 @@ function updateCartCount() {
 function createPopup() {
 
   const lastClosed = localStorage.getItem('popupClosedTime');
-
+  
   if (lastClosed) {
     const oneDayInMs = 24 * 60 * 60 * 1000;
     const timePassed = Date.now() - parseInt(lastClosed);
-
+    
     if (timePassed < oneDayInMs) {
       return;
     }
   }
 
-  const popup = document.createElement('div');
-  popup.className = 'popup-alert';
-  popup.innerHTML = `
-    <h2>Selamat Datang</h2>
-    <p>Ini adalah proyek web yang saya buat menggunakan html, css, dan js vanilla</p>
-    <button id="closePopup">Tutup, Jangan tampilkan lagi</button>
+  const popupHTML = `
+    <div class="popup-overlay"></div>
+    <div class="popup-alert">
+      <h2>Selamat Datang</h2>
+      <p>Ini adalah proyek web yang saya buat menggunakan html, css, dan js vanilla</p>
+      <button id="closePopup">Tutup, Jangan tampilkan lagi</button>
+    </div>
   `;
 
-  const overlay = document.createElement('div');
-  overlay.className = 'popup-overlay';
-
-  document.body.appendChild(overlay);
-  document.body.appendChild(popup);
+  document.body.insertAdjacentHTML('beforeend', popupHTML);
 
   function closePopup() {
-    document.body.removeChild(popup);
-    document.body.removeChild(overlay);
-
+    document.querySelector('.popup-alert').remove();
+    document.querySelector('.popup-overlay').remove();
     localStorage.setItem('popupClosedTime', Date.now());
   }
 
