@@ -137,11 +137,12 @@ function createPopup() {
   }
 
   const popupHTML = `
-    <div class="popup-overlay"></div>
+    <div class="popup-overlay">
     <div class="popup-alert">
       <h2>Selamat Datang</h2>
       <p>Ini adalah proyek web yang saya buat menggunakan html, css, dan js vanilla</p>
       <button id="closePopup">Tutup, Jangan tampilkan lagi</button>
+    </div>
     </div>
   `;
 
