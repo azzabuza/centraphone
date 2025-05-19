@@ -119,3 +119,43 @@ function updateCartCount() {
     cartCountElement.textContent = totalItems;
   }
 }
+
+
+
+// Fungsi untuk membuat popup
+function createPopup() {
+  // Cek apakah user sudah menutup popup sebelumnya
+  if (localStorage.getItem('popupClosed') === 'true') {
+    return;
+  }
+
+  // Buat elemen popup
+  const popup = document.createElement('div');
+  popup.className = 'popup-alert';
+  popup.innerHTML = `
+    <h2>Selamat Datang</h2>
+    <p>Ini adalah proyek web yang saya buat menggunakan html, css, dan js vanilla</p>
+    <button id="closePopup">Tutup, Jangan tampilkan lagi</button>
+  `;
+
+  // Buat overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'popup-overlay';
+
+  // Tambahkan ke dokumen
+  document.body.appendChild(overlay);
+  document.body.appendChild(popup);
+
+  // Fungsi untuk menutup popup
+  function closePopup() {
+    document.body.removeChild(popup);
+    document.body.removeChild(overlay);
+    localStorage.setItem('popupClosed', 'true');
+  }
+
+  // Tambahkan event listener ke tombol
+  document.getElementById('closePopup').addEventListener('click', closePopup);
+}
+
+// Jalankan fungsi saat halaman selesai dimuat
+document.addEventListener('DOMContentLoaded', createPopup);
