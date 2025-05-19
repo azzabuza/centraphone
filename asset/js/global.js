@@ -122,14 +122,20 @@ function updateCartCount() {
 
 
 
-// Fungsi untuk membuat popup
+// POPUP ALERT
 function createPopup() {
-  // Cek apakah user sudah menutup popup sebelumnya
-  if (localStorage.getItem('popupClosed') === 'true') {
-    return;
+
+  const lastClosed = localStorage.getItem('popupClosedTime');
+
+  if (lastClosed) {
+    const oneDayInMs = 24 * 60 * 60 * 1000;
+    const timePassed = Date.now() - parseInt(lastClosed);
+
+    if (timePassed < oneDayInMs) {
+      return;
+    }
   }
 
-  // Buat elemen popup
   const popup = document.createElement('div');
   popup.className = 'popup-alert';
   popup.innerHTML = `
@@ -138,24 +144,20 @@ function createPopup() {
     <button id="closePopup">Tutup, Jangan tampilkan lagi</button>
   `;
 
-  // Buat overlay
   const overlay = document.createElement('div');
   overlay.className = 'popup-overlay';
 
-  // Tambahkan ke dokumen
   document.body.appendChild(overlay);
   document.body.appendChild(popup);
 
-  // Fungsi untuk menutup popup
   function closePopup() {
     document.body.removeChild(popup);
     document.body.removeChild(overlay);
-    localStorage.setItem('popupClosed', 'true');
+
+    localStorage.setItem('popupClosedTime', Date.now());
   }
 
-  // Tambahkan event listener ke tombol
   document.getElementById('closePopup').addEventListener('click', closePopup);
 }
 
-// Jalankan fungsi saat halaman selesai dimuat
 document.addEventListener('DOMContentLoaded', createPopup);
