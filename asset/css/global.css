@@ -805,7 +805,7 @@ svg .line {
   border-radius: 50%;
   z-index: 1;
   bottom: 10px;
-  right: 10px;
+  right: 0;
 }
 .product-image {
   box-sizing: border-box;
@@ -1051,7 +1051,7 @@ svg .line {
   border-radius: 50%;
   z-index: 1;
   bottom: 10px;
-  right: 10px;
+  right: 0;
 }
 .shopping-getprice {
   color: #132028;
@@ -1677,7 +1677,7 @@ svg .line {
   border-radius: 50%;
   z-index: 1;
   bottom: 10px;
-  right: 10px;
+  right: 0;
 }
 .recommendation-image {
   box-sizing: border-box;
