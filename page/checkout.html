@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://centraphone.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://centraphone.vercel.app; font-src 'self' https://fonts.gstatic.com; object-src 'none';"
+    />
+    <title>Checkout Order</title>
+    <meta property="image" content="https://centraphone.vercel.app/asset/image/app.webp" />
+    <meta
+      name="description"
+      content="Complete your purchase with secure payment options for a smooth shopping experience at centraphone.vercel.app."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://centraphone.vercel.app/page/checkout.html" />
+    <!-- FACEBOOK -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Checkout Order" />
+    <meta
+      property="og:image"
+      content="https://centraphone.vercel.app/asset/image/app.webp"
+    />
+    <meta
+      property="og:description"
+      content="Complete your purchase with secure payment options for a smooth shopping experience at centraphone.vercel.app."
+    />
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Checkout Order" />
+    <meta
+      name="twitter:image"
+      content="https://centraphone.vercel.app/asset/image/app.webp"
+    />
+    <meta
+      name="twitter:description"
+      content="Complete your purchase with secure payment options for a smooth shopping experience at centraphone.vercel.app."
+    />
+    <!-- Mobile -->
+    <meta content="yes" name="mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="Centraphone" name="apple-mobile-web-app-title" />
+    <meta content="Centraphone" name="application-name" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="Centraphone" name="apple-mobile-web-app-status-bar-style" />
+    <link rel="icon" type="images/x-icon" href="../asset/image/logo.png" />
+    <meta name="theme-color" content="#24323d" />
+    <!-- PLUGIN -->
+    <link href="../asset/css/global.css" rel="stylesheet" />
+    <link href="../asset/css/responsive.css" rel="stylesheet" />
+    <style>
+      .checkout {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .checkout-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      
+      .checkout-left, .checkout-right {
+        flex: 1;
+        min-width: 300px;
+      }
+      
+      .checkout-section {
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      
+      .checkout-section h3 {
+        margin-top: 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+      }
+      
+      .form-group {
+        margin-bottom: 15px;
+      }
+      
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+      
+      .form-group input, .form-group select, .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+      
+      .payment-methods {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      
+      .payment-method {
+        flex: 1;
+        min-width: 120px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      
+      .payment-method:hover {
+        border-color: #24323d;
+      }
+      
+      .payment-method.selected {
+        border-color: #24323d;
+        background-color: #f5f7fa;
+      }
+      
+      .payment-method img {
+        height: 30px;
+        margin-bottom: 5px;
+      }
+      
+      .checkout-summary table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+      .checkout-summary table tr:not(:last-child) td {
+        padding-bottom: 10px;
+      }
+      
+      .checkout-summary table td:last-child {
+        text-align: right;
+      }
+      
+      .checkout-total {
+        font-weight: bold;
+        font-size: 1.2em;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+      }
+      
+      .checkout-button {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        background-color: #24323d;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.2s;
+      }
+      
+      .checkout-button:hover {
+        background-color: #1a242b;
+      }
+      
+      .checkout-button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+      
+      @media (max-width: 768px) {
+        .checkout-box {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      class="content-wrapper"
+      itemscope
+      itemtype="https://schema.org/WebPage"
+    >
+      <section class="header" id="header"></section>
+      <section class="checkout">
+        <h2>Checkout Order</h2>
+        <div class="checkout-box">
+          <div class="checkout-left">
+            <div class="checkout-section">
+              <h3>Shipping Information</h3>
+              <form id="shipping-form">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                  <label for="address">Full Address</label>
+                  <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="city">City</label>
+                  <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                  <label for="province">Province</label>
+                  <input type="text" id="province" name="province" required>
+                </div>
+                <div class="form-group">
+                  <label for="postal">Postal Code</label>
+                  <input type="text" id="postal" name="postal" required>
+                </div>
+                <div class="form-group">
+                  <label for="notes">Order Notes (Optional)</label>
+                  <textarea id="notes" name="notes" rows="2"></textarea>
+                </div>
+              </form>
+            </div>
+            
+            <div class="checkout-section">
+              <h3>Payment Method</h3>
+              <div class="payment-methods">
+                <div class="payment-method" data-method="bank-transfer">
+                  <img src="../asset/image/bank-transfer.png" alt="Bank Transfer">
+                  <div>Bank Transfer</div>
+                </div>
+                <div class="payment-method" data-method="credit-card">
+                  <img src="../asset/image/credit-card.png" alt="Credit Card">
+                  <div>Credit Card</div>
+                </div>
+                <div class="payment-method" data-method="e-wallet">
+                  <img src="../asset/image/e-wallet.png" alt="E-Wallet">
+                  <div>E-Wallet</div>
+                </div>
+                <div class="payment-method" data-method="cod">
+                  <img src="../asset/image/cod.png" alt="COD">
+                  <div>COD</div>
+                </div>
+              </div>
+              <input type="hidden" id="payment-method" name="payment-method" required>
+            </div>
+          </div>
+          
+          <div class="checkout-right">
+            <div class="checkout-section">
+              <h3>Order Summary</h3>
+              <div id="checkout-items"></div>
+            </div>
+            
+            <div class="checkout-section checkout-summary">
+              <h3>Payment Summary</h3>
+              <table>
+                <tr><td>Subtotal</td> <td id="checkout-subtotal">0</td></tr>
+                <tr><td>Insurance</td> <td id="checkout-insurance">0</td></tr>
+                <tr><td>Packaging</td> <td id="checkout-packing">0</td></tr>
+                <tr><td>Shipping</td> <td id="checkout-shipping">0</td></tr>
+                <tr><td>Admin Fee</td> <td id="checkout-administration">0</td></tr>
+                <tr class="checkout-total"><td>Total</td> <td id="checkout-total">0</td></tr>
+              </table>
+            </div>
+            
+            <div class="checkout-section">
+              <button id="place-order" class="checkout-button" disabled>Place Order</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer" id="footer"></section>
+      <section class="mobile" id="mobile"></section>
+    </main>
+    <script type="text/javascript" src="../asset/js/checkout.js"></script>
+    <script type="text/javascript" src="../asset/js/global.js"></script>
+  </body>
+</html>
