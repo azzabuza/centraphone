@@ -67,9 +67,9 @@ margin: 10px;
 }
 .checkout-box {
 box-sizing: border-box;
-padding: 0;
-margin: 0;
-overflow: hidden;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
 }
 .checkout-left {
 width: 70%;
@@ -210,6 +210,7 @@ tes hehehe
 </div>
   
 <div class="checkout-right">
+<div class="checkout-content">
 <h3>Order Summary</h3>
 <div id="checkout-items"></div>
 <h3>Payment Summary</h3>
@@ -222,7 +223,7 @@ tes hehehe
 <tr class="checkout-total"><td>Total</td> <td id="checkout-total">0</td></tr>
 </table>
 </div>
-
+</div>
 
 </div>
 </section>
