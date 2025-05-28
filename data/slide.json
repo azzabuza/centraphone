@@ -2,16 +2,16 @@
   {
     "url": "../page/shopping.html?product=zte-redmagic-8s-pro-16-512gb-transparent-black",
     "title": "ZTE Redmagic 8S Pro 16/512GB - Transparent Black",
-    "imageUrl": "../asset/image/promo/promo-redmagic-8s-pro.jpg"
+    "imageUrl": "../asset/image/promo/redmagic-8s-pro.jpg"
   },
   {
     "url": "../page/shopping.html?product=huawei-mate-x6-12-512gb-nebula-red",
     "title": "Huawei Mate X6 12/512GB - Nebula Red",
-    "imageUrl": "../asset/image/promo/promo-huawei-mate-x6.jpg"
+    "imageUrl": "../asset/image/promo/huawei-mate-x6.jpg"
   },
   {
     "url": "../page/shopping.html?product=apple-iphone-16-pro-max-512gb-desert-titanium",
     "title": "Apple Iphone 16 Pro Max 512GB - Desert Titanium",
-    "imageUrl": "../asset/image/promo/promo-iPhone-16-pro-max.jpg"
+    "imageUrl": "../asset/image/promo/iphone-16-pro-max.jpg"
   }
 ]
