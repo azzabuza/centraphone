@@ -40,7 +40,7 @@ function loadCart() {
   cart.forEach((item) => {
     const itemTotal = item.price * item.quantity;
     const itemInsurance = item.price * 0.003 * item.quantity;
-    const itemPacking = 6000 * item.quantity;
+    const itemPacking = 30000 * item.quantity;
 
     subtotal += itemTotal;
     totalInsurance += itemInsurance;
