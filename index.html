@@ -47,8 +47,88 @@
     <link href="app/manifest.json" rel="manifest" />
     <link href="asset/css/global.css" rel="stylesheet" />
     <link href="asset/css/responsive.css" rel="stylesheet" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6386975167514829"
-     crossorigin="anonymous"></script>
+    <style>
+      /* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .header,
+.dark-mode .footer {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode .slide,
+.dark-mode .brand,
+.dark-mode .product {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode .product-box,
+.dark-mode .brand-box {
+  background-color: #2d2d2d;
+}
+
+.dark-mode .product-card,
+.dark-mode .brand-card {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+.dark-mode .product-card:hover,
+.dark-mode .brand-card:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode h2 {
+  color: #ffffff;
+}
+
+.dark-mode .more-btn {
+  color: #bb86fc;
+}
+
+.dark-mode .more-btn:hover {
+  color: #3700b3;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #444;
+}
+
+.dark-mode .dark-mode-toggle {
+  background-color: #bb86fc;
+  color: #121212;
+}
+
+.dark-mode .dark-mode-toggle:hover {
+  background-color: #9a67ea;
+}
+    </style>
   </head>
   <body>
     <main
@@ -57,6 +137,19 @@
       itemtype="https://schema.org/WebPage"
     >
       <section class="header" id="header"></section>
+<button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle>
+    <path d="M12 1v2"></path>
+    <path d="M12 21v2"></path>
+    <path d="M4.22 4.22l1.42 1.42"></path>
+    <path d="M18.36 18.36l1.42 1.42"></path>
+    <path d="M1 12h2"></path>
+    <path d="M21 12h2"></path>
+    <path d="M4.22 19.78l1.42-1.42"></path>
+    <path d="M18.36 5.64l1.42-1.42"></path>
+  </svg>
+</button>
       <section class="slide" id="slide">
         <h2>Featured Product</h2>
         <div class="slide-container" id="slider">
@@ -195,6 +288,47 @@
       <section class="footer" id="footer"></section>
       <section class="mobile" id="mobile"></section>
     </main>
+<script>
+// Dark Mode Functionality
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+// Check for saved user preference, if any
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+  body.classList.add('dark-mode');
+}
+
+// Add event listener to the toggle button
+darkModeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  
+  // Save the current preference to localStorage
+  if (body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+});
+
+// Optional: Check for user's OS preference
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !currentTheme) {
+  body.classList.add('dark-mode');
+  localStorage.setItem('theme', 'dark');
+}
+
+// Listen for changes in OS preference
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  const newColorScheme = e.matches ? 'dark' : 'light';
+  if (newColorScheme === 'dark') {
+    body.classList.add('dark-mode');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    body.classList.remove('dark-mode');
+    localStorage.setItem('theme', 'light');
+  }
+});
+</script>
     <script type="text/javascript" src="asset/js/register.js"></script>
     <script type="text/javascript" src="config/product.js"></script>
     <script type="text/javascript" src="config/level.js"></script>
