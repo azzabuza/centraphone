@@ -757,7 +757,7 @@ svg .line {
 .product {
   box-sizing: border-box;
   position: relative;
-  padding: 10px;
+  padding: 20px;
   margin: 0;
   text-align: left;
 }
@@ -766,11 +766,11 @@ svg .line {
   font-weight: 600;
   color: #090e11;
   padding: 0;
-  margin: 10px;
+  margin: 0;
 }
 .product-box {
 display: grid;
-  grid-template-columns:repeat(4, 1fr);
+  grid-template-columns:repeat(6, 1fr);
   gap:20px;
 }
 .product-grid {
