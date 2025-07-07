@@ -193,47 +193,6 @@
       <section class="footer" id="footer"></section>
       <section class="mobile" id="mobile"></section>
     </main>
-<script>
-// Dark Mode Functionality
-const darkModeToggle = document.getElementById('darkModeToggle');
-const body = document.body;
-
-// Check for saved user preference, if any
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme === 'dark') {
-  body.classList.add('dark-mode');
-}
-
-// Add event listener to the toggle button
-darkModeToggle.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-  
-  // Save the current preference to localStorage
-  if (body.classList.contains('dark-mode')) {
-    localStorage.setItem('theme', 'dark');
-  } else {
-    localStorage.setItem('theme', 'light');
-  }
-});
-
-// Optional: Check for user's OS preference
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !currentTheme) {
-  body.classList.add('dark-mode');
-  localStorage.setItem('theme', 'dark');
-}
-
-// Listen for changes in OS preference
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-  const newColorScheme = e.matches ? 'dark' : 'light';
-  if (newColorScheme === 'dark') {
-    body.classList.add('dark-mode');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    body.classList.remove('dark-mode');
-    localStorage.setItem('theme', 'light');
-  }
-});
-</script>
     <script type="text/javascript" src="asset/js/register.js"></script>
     <script type="text/javascript" src="config/product.js"></script>
     <script type="text/javascript" src="config/level.js"></script>
